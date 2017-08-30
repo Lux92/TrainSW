@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/trainsw?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping resource="trainsw/Stazione.hbm.xml"/>
+    <mapping resource="trainsw/Deposito.hbm.xml"/>
+    <mapping resource="trainsw/TipoTreno.hbm.xml"/>
+    <mapping resource="trainsw/Treno.hbm.xml"/>
+    <mapping resource="trainsw/Collegamento.hbm.xml"/>
+    <mapping resource="trainsw/Percorso.hbm.xml"/>
+    <mapping resource="trainsw/Fermata.hbm.xml"/>
+    <mapping resource="trainsw/Tratta.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
